@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -17,8 +17,10 @@ export default ({ data }) => (
       <h1 style={{ color: "gray", fontSize: "1.4rem" }}>
         This is my 1st Gatsby blog.
       </h1>
+      {/* Posts */}
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div style={{ margin: "10px 0 50px 0" }} key={node.id}>
+          {/* Title */}
           <h3
             style={{
               color: "#595959",
@@ -29,39 +31,61 @@ export default ({ data }) => (
           >
             {node.frontmatter.title}
           </h3>
+          {/* Data & time to read */}
           <span
             style={{
               fontSize: "0.8rem",
               color: "darkGray",
               margin: "0 0 10px 0",
+              display: "inline-flex",
+              alignItems: "center",
+              verticalAlign: "middle",
             }}
           >
-            {node.frontmatter.date}-
+            {node.frontmatter.date}
             <svg
               viewBox="0 0 24 24"
               style={{
-                stroke: "none",
-                width: "20px",
-                height: "20px",
-                fill: "rgb(209, 209, 209)",
+                margin: "0 3px 0 10px",
+                fill: "none",
+                width: "15px",
+                height: "15px",
+                stroke: "darkGray",
+                strokeWidth: "1.5",
+                strokeLinecap: "round",
               }}
             >
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <circle cx="12" cy="12" r="9" />
               <polyline points="12 7 12 12 15 15" />
             </svg>
-            {node.timeToRead}min.
+            {node.timeToRead} min.
           </span>
+          {/* Thumbnail */}
           <div
             style={{
-              width: "100%",
-              height: "150px",
+              margin: "0 2%",
+              width: "96%",
+              height: "250px",
               backgroundImage: `url(${node.frontmatter.thumbnail})`,
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
-          ></div>
+          />
+          {/* Excerpt */}
+          <p
+            style={{
+              margin: "0 2%",
+              width: "96%",
+              fontSize: "0.7rem",
+              fontWeight: "bold",
+              textAlign: "justify",
+              textJustify: "inter-word",
+            }}
+          >
+            {node.excerpt}
+          </p>
         </div>
       ))}
       <h6>Total blogs: {data.allMarkdownRemark.totalCount}</h6>
