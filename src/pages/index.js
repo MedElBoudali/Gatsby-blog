@@ -14,23 +14,27 @@ export default ({ data }) => (
         textAlign: "left",
       }}
     >
-      <h1 style={{ color: "gray", fontSize: "1.4rem" }}>
-        This is my 1st Gatsby blog.
-      </h1>
       {/* Posts */}
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <div style={{ margin: "10px 0 50px 0" }} key={node.id}>
           {/* Title */}
-          <h3
+          <a
             style={{
               color: "#595959",
+              width: "fit-content",
               fontSize: "1rem",
+              fontWeight: "bold",
               textTransform: "uppercase",
               margin: "0",
+              textDecoration: "none",
+              display: "block",
             }}
+            href={node.fields.slug}
+            target="_blank"
+            rel="noreferrer"
           >
             {node.frontmatter.title}
-          </h3>
+          </a>
           {/* Data & time to read */}
           <span
             style={{
@@ -109,6 +113,9 @@ export const query = graphql`
           html
           excerpt
           timeToRead
+          fields {
+            slug
+          }
         }
       }
       totalCount
