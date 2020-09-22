@@ -1,7 +1,8 @@
 ---
-title: 'My First AMA'
-date: '2020-09-22'
-description: 'My first AMA :)'
+title: "My First AMA"
+description: "My first AMA :)"
+thumbnail: "https://www.insertcart.com/wp-content/uploads/2018/05/thumbnail.jpg"
+date: "2020-09-22"
 ---
 
 Thank you everyone who enjoyed the AMA! It was my first one and I'd love to do it again.
