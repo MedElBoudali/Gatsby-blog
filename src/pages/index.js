@@ -30,8 +30,8 @@ export default ({ data }) => (
               display: "block",
             }}
             href={node.fields.slug}
-            target="_blank"
-            rel="noreferrer"
+            // target="_blank"
+            // rel="noreferrer"
           >
             {node.frontmatter.title}
           </a>
