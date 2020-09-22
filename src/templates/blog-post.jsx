@@ -13,7 +13,12 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
-  query($slug: string!) {
-    markdonRemark(fields: { slug: { eq: $slug } })
+  query($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        title
+      }
+    }
   }
 `
