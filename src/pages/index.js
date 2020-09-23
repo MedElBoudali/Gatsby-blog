@@ -4,12 +4,12 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const Section = styled(section)`
+const Section = styled.section`
   width: 100%;
   min-height: 100%;
   text-align: left;
 `
-const BlogContainer = styled(div)`
+const BlogContainer = styled.div`
   margin: 10px 0 50px 0;
 `
 const BlogTitle = styled(Link)`
@@ -23,7 +23,7 @@ const BlogTitle = styled(Link)`
   display: block;
 `
 
-const BlogSubtitle = styled(span)`
+const BlogSubtitle = styled.span`
   font-size: 0.8rem;
   color: darkGray;
   margin: 0 0 10px 0;
@@ -32,7 +32,7 @@ const BlogSubtitle = styled(span)`
   vertical-align: middle;
 `
 
-const Svg = styled(svg)`
+const Svg = styled.svg`
   margin: 0 3px 0 10px;
   fill: none;
   width: 15px;
@@ -42,7 +42,7 @@ const Svg = styled(svg)`
   stroke-linecap: round;
 `
 
-const Thumbnail = styled(div)`
+const Thumbnail = styled.div`
   margin: 0 2%;
   width: 96%;
   height: 250px;
@@ -52,7 +52,7 @@ const Thumbnail = styled(div)`
   background-position: center;
 `
 
-const Excerpt = styled(p)`
+const Excerpt = styled.p`
   margin: 0 2%;
   width: 96%;
   font-size: 0.7rem;
