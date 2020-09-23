@@ -4,6 +4,10 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
 
+const Thumbnail = styled.img`
+  width: 100%;
+`
+
 export default ({ data }) => {
   const {
     html,
@@ -13,12 +17,7 @@ export default ({ data }) => {
     <Layout>
       <SEO title={title} />
       <div>{title}</div>
-      <img
-        src={thumbnail}
-        alt="thumbnail"
-        loading="lazy"
-        style={{ width: "100%" }}
-      />
+      <Thumbnail src={thumbnail} alt="thumbnail" loading="lazy" />
       <div dangerouslySetInnerHTML={{ __html: html }}></div>
     </Layout>
   )
