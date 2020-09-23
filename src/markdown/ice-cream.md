@@ -1,6 +1,6 @@
 ---
-title: "Why I Love Ice Cream"
-thumbnail: "https://www.elegantthemes.com/blog/wp-content/uploads/2019/04/change-wordpress-thumbnail-size-featured-image.jpg"
+title: "Why I Love Ice Cream?"
+thumbnail: "https://family.disney.com/wp-content/uploads/2020/08/Ice-Cream-Horiz-2.png"
 date: "2020-09-22"
 ---
 

@@ -43,13 +43,16 @@ const Svg = styled.svg`
 `
 
 const Thumbnail = styled.div`
-  margin: 0 2%;
-  width: 96%;
-  height: 250px;
-  background-image: ${({url}) => `url(${url})`};
+  margin: 0 1%;
+  width: 98%;
+  height: 300px;
+  background-image: ${({ url }) => `url(${url})`};
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  border: 4px solid rgba(86, 0, 173, 0.4);
+  border-radius: 10px;
+  background-clip: padding-box;
 `
 
 const Excerpt = styled.p`
@@ -95,7 +98,7 @@ export default ({ data }) => (
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
       edges {
         node {
           frontmatter {

@@ -1,19 +1,25 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
+import styled from "styled-components"
 
 export default ({ data }) => {
-  const post = data.markdownRemark
+  const {
+    html,
+    frontmatter: { title, thumbnail },
+  } = data.markdownRemark
   return (
     <Layout>
-      <div>{post.frontmatter.title}</div>
+      <SEO title={title} />
+      <div>{title}</div>
       <img
-        src={post.frontmatter.thumbnail}
+        src={thumbnail}
         alt="thumbnail"
         loading="lazy"
         style={{ width: "100%" }}
       />
-      <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+      <div dangerouslySetInnerHTML={{ __html: html }}></div>
     </Layout>
   )
 }

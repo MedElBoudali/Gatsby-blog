@@ -1,8 +1,8 @@
 ---
 title: "My First AMA"
 description: "My first AMA :)"
-thumbnail: "https://www.insertcart.com/wp-content/uploads/2018/05/thumbnail.jpg"
-date: "2020-09-22"
+thumbnail: "https://camo.githubusercontent.com/39c78fb82ddc08bc047170b6dcca532da633a269/687474703a2f2f692e696d6775722e636f6d2f4a5469735a55462e706e67"
+date: "2020-09-23"
 ---
 
 Thank you everyone who enjoyed the AMA! It was my first one and I'd love to do it again.
