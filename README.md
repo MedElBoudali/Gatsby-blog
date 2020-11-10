@@ -5,7 +5,7 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby's default starter
+  My Gatsby's default starter
 </h1>
 <h2 align="center">
   👌 Live: https://vigilant-knuth-e30ecc.netlify.app/
